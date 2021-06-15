@@ -1,0 +1,178 @@
+Nim : 20083000104
+Nama : Muhamad Reza Asri
+Kelas : 2E Sistem Informasi
+**************************************
+Soal no 7. Aplikasi 5
+A. Algoritma mengecek kelulusan 
+1. siapkan var n, sts (n=nilai , sts=status), pesan
+2. input n 
+3. cek range inputan n 
+jika n>=60 maka sts="lulus"
+selain itu sts="tidak lulus"
+
+selain itu pesan = "masukan nilai"
+kembali ke no.2
+**************************************
+Pseudocode 
+var n byte = 0  
+var sts string 
+var pesan string 
+A: read n
+if n>=60 then sts="lulus"
+else sts="tidak lulus"
+else 
+pesan = "masukan nilai"
+print pesan 
+goto A
+**************************************
+B. Algoritma Mengecek tingkat usia
+Algoritma cek golongan usia
+1. siapkan var u, sts (u=umur, sts= status),
+ pesan
+2. input u
+3. cek range inputan u
+jika u>=0 DAN u<=100 maka
+ jika u>=60, maka sts="lansia"
+ jika u>=35 DAN u<=59, sts="dewasa"
+ jika u>=18 DAN u<=34, sts="Pemuda"
+ jika u>=15 DAN u<=17, sts="remaja" 
+selain itu pesan="Masukkan nilai umur 0-100"
+kembali ke no 2.
+**************************************
+Pseudocode 
+var u byte = 0
+var sts string
+var pesan string
+Print "MASUKKAN ANGKA 0-100 SAJA"
+Do 
+  Read u
+Loop Until u>=0 AND u<=100
+ if u>=60 then sts="lansia"
+   else if u>=35 then sts="dewasa"
+   else if u>=18 then sts="pemuda"
+   else if u>=15 then sts="remaja"
+print sts
+**************************************
+C. Algoritma Menginputkan sebuah bilangan bulat
+algoritma cek nilai 
+1. siapkan var n, sts (n=nilai, sts=status), pesan
+2. input n
+3. cek range n
+jika n>=0 DAN n<=100, maka
+ jika n>80 maka sts="baik sekali"
+ jika n>=65 dan n<=80 maka sts="baik"
+ jika n>=55 dan n<=65 maka sts="cukup"
+ jika n>=40 dan n<=55 maka sts="kurang"
+ selain itu sts="kurang sekali"
+selain itu pesan ="Masukkan angka 0-100"
+tampilkan pesan
+kembali ke no 2
+4. tampilkan sts
+**************************************
+Pseudocode 
+var n byte = 0
+var sts string
+var pesan string
+Print "MASUKKAN ANGKA 0-100 SAJA"
+Do 
+  Read n
+Loop Until u>=0 AND u<=100
+ if n>=80 then sts="baik sekali"
+   else if n>=65 then sts="baik"
+   else if n>=55 then sts="cukup"
+   else if n>=40 then sts="kurang"
+else sts="kurang sekali"
+print sts
+**************************************
+D. Algoritma Penilaian Mahasiswa
+1. siapkan var n, sts (n=nilai, sts=status), pesan
+2. input n
+3. cek range n
+jika n>=0 DAN n<=100, maka
+ jika n>91 dan n<=100 maka sts="A"
+ jika n>=81 dan n<=91 maka sts="B"
+ jika n>=71 dan n<=81 maka sts="C"
+ selain itu sts="D"
+selain itu pesan ='Masukkan angka 0-100'
+tampilkan pesan
+kembali ke no 2
+4. tampilkan sts
+**************************************
+Pseudocode 
+var n byte = 0
+var sts string
+var pesan string
+Print "MASUKKAN ANGKA 0-100 SAJA"
+Do 
+  Read n
+Loop Until n>=0 AND n<=100
+ if n>=91 n<=100 then sts="A"
+   else if n>=81 n<=91 then sts="B"
+   else if n>=71 n<=81 then sts="C"
+else sts="kurang sekali"
+print sts
+**************************************
+Soal no.8 Aplikasi 6
+Algoritma Hitung transaksi printer dan infus
+1. siapkan var hrgDasarPrinter ,persenDiskon, minDiskon, qty,
+totAwal, nilaiDiskon, totBayar, stsInfus, hrgInfus,
+hrgSatNonInfus, hrgSatInfus, qtyPrintInfus, qytPrintNonInfus
+
+//stsInfus = Y atau T
+
+2. set nilai awal
+ minDiskon = 1500000
+ persenDiskon = 0.15
+ hrgDasarPrinter = 660000
+ hrgInfus = 250000
+ hrgSatNonInfus = hrgDasarPrinter 
+ hrgSatInfus = hrgDasarPrinter + hrgInfus 
+
+3. input qtyPrintInfus, qytPrintNonInfus
+4. hitung total sebelum diskon
+   jika qtyPrintInfus > 0 dan qytPrintNonInfus > 0
+	totAwal =  (qtyPrintInfus * hrgSatInfus) + (qytPrintNonInfus*hrgSatNonInfus )
+   jika qtyPrintInfus > 0
+    	totAwal =  qtyPrintInfus * hrgSatInfus 
+   jika qytPrintNonInfus > 0
+	totAwal = qytPrintNonInfus * hrgSatNonInfus
+   selain itu kembali ke no 3
+4. hitung nilaiDiskon
+   jika totAwal>minDiskon, maka nilaiDiskon= totAwal*persenDiskon
+   selain itu nilaiDiskon = 0
+5. totBayar = totAwal - nilaiDiskon
+6. tampilkan totBayar
+**************************************
+PSEUDOCODE:
+set hrgDasarPrinter, hrgInfus int
+set persenDiskon Single
+set hrgSatNonInfus, hrgSatInfus int
+set qtyPrintInfus, qytPrintNonInfus byte
+set stsInfus string
+set minDiskon, totAwal, nilaiDiskon, totBayar int = 0
+ minDiskon = 1500000
+ persenDiskon = 0.15
+ hrgDasarPrinter = 660000
+ hrgInfus = 250000
+ hrgSatNonInfus = hrgDasarPrinter 
+ hrgSatInfus = hrgDasarPrinter + hrgInfus 
+
+Do 
+ Read qtyPrintInfus, qytPrintNonInfus
+Loop Until qtyPrintInfus >= 0 OR qytPrintNonInfus >=0
+
+ If qtyPrintInfus > 0 AND qytPrintNonInfus > 0
+	totAwal =  (qtyPrintInfus * hrgSatInfus) + (qytPrintNonInfus*hrgSatNonInfus )
+   else if qtyPrintInfus > 0
+    	totAwal =  qtyPrintInfus * hrgSatInfus 
+   else if qytPrintNonInfus > 0
+	totAwal = qytPrintNonInfus * hrgSatNonInfus
+ end if
+
+If totAwal>minDiskon Then 
+ nilaiDiskon = totAwal*persenDiskon
+else
+ nilaiDiskon = 0
+end if
+totBayar = totAwal - nilaiDiskon
+Print totBayar
